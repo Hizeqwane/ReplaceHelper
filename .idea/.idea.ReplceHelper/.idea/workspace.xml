@@ -4,8 +4,24 @@
     <projectFile>ReplaceHelperPlugin/ReplaceHelperPlugin.csproj</projectFile>
     <projectFile>ReplceHelper/ReplceHelper.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="17c10dbc-126e-4e53-91fb-3fe6c2786ed4" name="Changes" comment="" />
+    <list default="true" id="17c10dbc-126e-4e53-91fb-3fe6c2786ed4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ReplaceHelper/GlobalUsings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReplaceHelper/Interfaces/ReplaceHelperOptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReplaceHelper/Models/ReplaceHarvest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReplaceHelper/Models/ReplacePosition.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReplaceHelperTests/ReplaceHelperTests.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReplaceHelperTests/UnitTest1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ReplceHelper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReplceHelper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReplaceHelper/Implementations/ReplaceHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReplaceHelper/Implementations/ReplaceHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReplaceHelper/Interfaces/IReplaceHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReplaceHelper/Interfaces/IReplaceHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReplaceHelper/Models/ReplaceTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReplaceHelper/Models/ReplaceTemplate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReplaceHelper/Models/Replacement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReplaceHelper/Models/Replacement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReplceHelper.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ReplceHelper.sln" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,21 +50,31 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2pvhj4B3RZNHWrqwdduXcG0bAIf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dd23862b-85d9-40a8-825f-9e55ebe045b3.executor": "Debug",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Егор\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Егор\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Егор\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\vishnyakov.e.a\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\vishnyakov.e.a\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\vishnyakov.e.a\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -100,6 +126,7 @@
       <updated>1733652587705</updated>
       <workItem from="1733652588737" duration="43000" />
       <workItem from="1733653459211" duration="124000" />
+      <workItem from="1733719157566" duration="2485000" />
     </task>
     <servers />
   </component>
@@ -110,5 +137,24 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ReplaceHelperTests/UnitTest1.cs</url>
+          <line>17</line>
+          <properties documentPath="C:\Work\my_projects\ReplaceHelper\ReplaceHelperTests\UnitTest1.cs" initialLine="17" containingFunctionPresentation="Method 'Test1'">
+            <startOffsets>
+              <option value="484" />
+            </startOffsets>
+            <endOffsets>
+              <option value="491" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
