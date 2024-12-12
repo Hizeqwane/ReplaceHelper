@@ -28,7 +28,8 @@ public class UnitTest1
         {
             Replacements =
             {
-                new ReplacementQuery("привет", [31, 62]),
+                new ReplacementQuery("привет", [31]),
+                new ReplacementQuery("привет", [62, 0]),
                 new ReplacementQuery("три", [89]),
                 new ReplacementQuery("раз", [])
             }

@@ -67,7 +67,7 @@ public class ReplaceHelper(
             .ToList();
         
         var replacementsByDescPositions = templateQuery.Replacements
-            .SelectMany(s => s.Positions.Select(p => (s.Str, p.Index)))
+            .SelectMany(s => s.Positions.Select(p => (s.Str, p.Index, Positions: s.Positions.OrderBy(pos => pos.Index).ToList())))
             .OrderByDescending(s => s.Index);
         
         foreach (var replacement in replacementsByDescPositions)
@@ -78,7 +78,7 @@ public class ReplaceHelper(
             result.Replace
             (
                 replacement.Str,
-                GetSpecSymbolStr($"{replacement.Str}{replacement.Index}"),
+                GetSpecSymbolStr($"{replacement.Str}{string.Join('_', replacement.Positions.Select(s => s.Index))}"),
                 replacement.Index,
                 replacement.Str.Length
             );

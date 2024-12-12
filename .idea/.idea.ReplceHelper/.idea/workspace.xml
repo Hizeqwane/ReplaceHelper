@@ -9,18 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17c10dbc-126e-4e53-91fb-3fe6c2786ed4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ReplaceHelper/Models/Query/ReplacePositionQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReplaceHelper/Models/Query/ReplacementQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReplaceHelper/Models/Response/ReplacePositionResponse.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ReplceHelper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ReplceHelper/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReplaceHelper/Implementations/ReplaceHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReplaceHelper/Implementations/ReplaceHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReplaceHelper/Interfaces/IReplaceHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReplaceHelper/Interfaces/IReplaceHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReplaceHelper/Interfaces/ReplaceHelperOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReplaceHelper/Interfaces/ReplaceHelperOptions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReplaceHelper/Models/ReplaceHarvest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReplaceHelper/Models/Response/ReplaceHarvestResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReplaceHelper/Models/ReplacePosition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReplaceHelper/Models/ReplaceTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReplaceHelper/Models/Query/ReplaceTemplateQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReplaceHelper/Models/Replacement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReplaceHelper/Models/Response/ReplacementResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReplaceHelperTests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ReplaceHelperTests/UnitTest1.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +32,9 @@
     &quot;accountId&quot;: &quot;d072f4e3-78e3-4a9f-8c45-6b4232371b19&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Work/my_projects/ReplaceHelper/ReplaceHelper/Interfaces/IReplaceHelper.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="Toolset" />
@@ -127,7 +120,8 @@
       <workItem from="1733652588737" duration="43000" />
       <workItem from="1733653459211" duration="124000" />
       <workItem from="1733719157566" duration="2652000" />
-      <workItem from="1733978385773" duration="2017000" />
+      <workItem from="1733978385773" duration="2318000" />
+      <workItem from="1734002460605" duration="615000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
@@ -137,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733721793964</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Сделал метод по получению шаблона">
+      <option name="closed" value="true" />
+      <created>1733980694546</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733980694546</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +150,26 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="start" />
-    <option name="LAST_COMMIT_MESSAGE" value="start" />
+    <MESSAGE value="Сделал метод по получению шаблона" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал метод по получению шаблона" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ReplaceHelperTests/UnitTest1.cs</url>
+          <line>37</line>
+          <properties documentPath="C:\Work\my_projects\ReplaceHelper\ReplaceHelperTests\UnitTest1.cs" initialLine="37" containingFunctionPresentation="Method 'Test2'">
+            <startOffsets>
+              <option value="1236" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1237" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
