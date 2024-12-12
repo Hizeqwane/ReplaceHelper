@@ -1,3 +1,7 @@
+using System.Text;
+using ReplaceHelper.Models.Query;
+using ReplaceHelper.Models.Response;
+
 namespace ReplaceHelper.Implementations;
 
 /// <inheritdoc />
@@ -6,14 +10,14 @@ public class ReplaceHelper(
     : IReplaceHelper
 {
     /// <inheritdoc />
-    public ReplaceHarvest GetReplaceHarvest(string input1, string input2)
+    public ReplaceHarvestResponse GetReplaceHarvest(string input1, string input2)
     {
         var list1 = Split(input1);
         var list2 = Split(input2);
         
         var minLength = Math.Min(list1.Length, list2.Length);
 
-        var replaceHarvest = new ReplaceHarvest();
+        var replaceHarvest = new ReplaceHarvestResponse();
         
         for (var i = 0; i < minLength; i++)
         {
@@ -21,23 +25,24 @@ public class ReplaceHelper(
                 continue;
             
             var foundedReplacement = replaceHarvest.Replacements
-                .FirstOrDefault(s => s.FirstStr.Equals(list1[i], replaceHelperOptions.ComparisonType) &&
-                                     s.SecondStr.Equals(list2[i], replaceHelperOptions.ComparisonType));
+                // ReSharper disable AccessToModifiedClosure
+                .FirstOrDefault(s => s.IsStrings(list1[i], list2[i], replaceHelperOptions.ComparisonType));
+                // ReSharper restore AccessToModifiedClosure
             if (foundedReplacement == null)
             {
-                var position = new ReplacePosition
+                var position = new ReplacePositionResponse
                 (
                     input1.IndexOf(list1[i], replaceHelperOptions.ComparisonType),
                     input2.IndexOf(list2[i], replaceHelperOptions.ComparisonType)
                 );
                 
-                var replacement = new Replacement(list1[i], list2[i], position);
+                var replacement = new ReplacementResponse(list1[i], list2[i], position);
                 
                 replaceHarvest.Replacements.Add(replacement);    
             }
             else
             {
-                var position = new ReplacePosition
+                var position = new ReplacePositionResponse
                 (
                     input1[(foundedReplacement.Positions.Last().FirstIndex + 1)..].IndexOf(list1[i],
                         replaceHelperOptions.ComparisonType),
@@ -53,11 +58,47 @@ public class ReplaceHelper(
     }
 
     /// <inheritdoc />
-    public string GetReplaceTemplate(string input1, string input2, ReplaceTemplate template)
+    public string GetReplaceTemplate(string input1, ReplaceTemplateQuery templateQuery)
     {
-        throw new NotImplementedException();
+        var result = new StringBuilder(input1);
+
+        var emptyPositionReplacements = templateQuery.Replacements
+            .Where(s => s.Positions.Count == 0)
+            .ToList();
+        
+        var replacementsByDescPositions = templateQuery.Replacements
+            .SelectMany(s => s.Positions.Select(p => (s.Str, p.Index)))
+            .OrderByDescending(s => s.Index);
+        
+        foreach (var replacement in replacementsByDescPositions)
+        {
+            if (replacement.Index > result.Length - 1)
+                throw new ArgumentException($"Индекс замены {replacement.Index} для подстроки {replacement.Str} больше длины строки.");
+
+            result.Replace
+            (
+                replacement.Str,
+                GetSpecSymbolStr($"{replacement.Str}{replacement.Index}"),
+                replacement.Index,
+                replacement.Str.Length
+            );
+        }
+
+        foreach (var emptyPositionReplacement in emptyPositionReplacements)
+            result.Replace
+            (
+                emptyPositionReplacement.Str,
+                GetSpecSymbolStr($"{emptyPositionReplacement.Str}")
+            );
+
+        return result.ToString();
     }
 
+    private string GetSpecSymbolStr(string str) =>
+        $"{replaceHelperOptions.specSymbolsForTemplate[..(replaceHelperOptions.specSymbolsForTemplate.Length / 2)]}" +
+        $"{str}" +
+        $"{replaceHelperOptions.specSymbolsForTemplate[(replaceHelperOptions.specSymbolsForTemplate.Length / 2)..]}";
+    
     private string[] Split(string input) =>
         Regex.Matches(input, replaceHelperOptions.SplitPattern)
             .Select(m => m.Value)

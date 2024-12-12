@@ -1,18 +1,18 @@
-namespace ReplaceHelper.Models;
+namespace ReplaceHelper.Models.Response;
 
 /// <summary>
 /// Замена
 /// </summary>
-public class Replacement
+public class ReplacementResponse
 {
-    public Replacement(
+    public ReplacementResponse(
         string firstStr,
         string secondStr,
-        ReplacePosition replacePosition)
+        ReplacePositionResponse replacePositionResponse)
     {
         FirstStr = firstStr;
         SecondStr = secondStr;
-        Positions.Add(replacePosition);
+        Positions.Add(replacePositionResponse);
     }
     
     /// <summary>
@@ -33,12 +33,12 @@ public class Replacement
     /// <summary>
     /// Сопоставление позиций в первом и втором объектах
     /// </summary>
-    public List<ReplacePosition> Positions { get; } = [];
+    public List<ReplacePositionResponse> Positions { get; } = [];
 
-    public override int GetHashCode() => 
-        (FirstStr + SecondStr).GetHashCode();
-
-    public bool Equals(Replacement replacement, StringComparison stringComparison) =>
-        replacement.FirstStr.Equals(FirstStr, stringComparison) &&
-        replacement.SecondStr.Equals(SecondStr, stringComparison);
+    public bool IsStrings(
+        string input1,
+        string input2,
+        StringComparison stringComparison = StringComparison.OrdinalIgnoreCase) =>
+        FirstStr.Equals(input1, stringComparison) &&
+        SecondStr.Equals(input2, stringComparison);
 }

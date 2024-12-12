@@ -1,3 +1,6 @@
+using ReplaceHelper.Models.Query;
+using ReplaceHelper.Models.Response;
+
 namespace ReplaceHelper.Interfaces;
 
 /// <summary>
@@ -8,10 +11,10 @@ public interface IReplaceHelper
     /// <summary>
     /// Получить заготовку для замен по двум экземплярам
     /// </summary>
-    ReplaceHarvest GetReplaceHarvest(string input1, string input2);
+    ReplaceHarvestResponse GetReplaceHarvest(string input1, string input2);
     
     /// <summary>
     /// Получить шаблон для замен по двум экземплярам и заготовке
     /// </summary>
-    string GetReplaceTemplate(string input1, string input2, ReplaceTemplate template);
+    string GetReplaceTemplate(string input1, ReplaceTemplateQuery templateQuery);
 }

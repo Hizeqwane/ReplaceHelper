@@ -1,9 +1,9 @@
-namespace ReplaceHelper.Models;
+namespace ReplaceHelper.Models.Response;
 
 /// <summary>
 /// Заготовка замен
 /// </summary>
-public class ReplaceHarvest
+public class ReplaceHarvestResponse
 {
     /// <summary>
     /// Id
@@ -13,5 +13,5 @@ public class ReplaceHarvest
     /// <summary>
     /// Замены
     /// </summary>
-    public List<Replacement> Replacements { get; } = [];
+    public List<ReplacementResponse> Replacements { get; } = [];
 }
