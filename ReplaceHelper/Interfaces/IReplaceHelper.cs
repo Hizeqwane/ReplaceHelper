@@ -1,4 +1,5 @@
-using ReplaceHelper.Models.Query;
+using ReplaceHelper.Models.Query.GetStr;
+using ReplaceHelper.Models.Query.GetTemplate;
 using ReplaceHelper.Models.Response;
 
 namespace ReplaceHelper.Interfaces;
@@ -14,7 +15,12 @@ public interface IReplaceHelper
     ReplaceHarvestResponse GetReplaceHarvest(string input1, string input2);
     
     /// <summary>
-    /// Получить шаблон для замен по двум экземплярам и заготовке
+    /// Получить шаблон для замен
     /// </summary>
-    string GetReplaceTemplate(string input1, ReplaceTemplateQuery templateQuery);
+    string GetReplaceTemplate(string input1, GetTemplateReplaceQuery query);
+
+    /// <summary>
+    /// Получить экземпляр по шаблону и заменам
+    /// </summary>
+    string GetStrByTemplate(string template, GetStrReplaceQuery replaceQuery);
 }

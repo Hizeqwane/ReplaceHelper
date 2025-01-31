@@ -1,9 +1,9 @@
-namespace ReplaceHelper.Models.Query;
+namespace ReplaceHelper.Models.Query.GetTemplate;
 
 /// <summary>
 /// Замена
 /// </summary>
-public class ReplacementQuery(
+public class GetTemplateReplacementQuery(
     string str,
     IEnumerable<int> positions)
 {
@@ -15,7 +15,7 @@ public class ReplacementQuery(
     /// <summary>
     /// Позиции
     /// </summary>
-    public List<ReplacePositionQuery> Positions { get; } = positions
-        .Select(s => new ReplacePositionQuery(s))
+    public List<GetTemplateReplacePositionQuery> Positions { get; } = positions
+        .Select(s => new GetTemplateReplacePositionQuery(s))
         .ToList();
 }

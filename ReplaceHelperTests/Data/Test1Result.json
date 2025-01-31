@@ -1,0 +1,75 @@
+{
+  "Id": "00000000-0000-0000-0000-000000000000",
+  "Replacements": [
+    {
+      "Id": "00000000-0000-0000-0000-000000000000",
+      "FirstStr": "ещё",
+      "SecondStr": "больше",
+      "Positions": [
+        {
+          "FirstIndex": 6,
+          "SecondIndex": 6
+        }
+      ]
+    },
+    {
+      "Id": "00000000-0000-0000-0000-000000000000",
+      "FirstStr": "французских",
+      "SecondStr": "китайских",
+      "Positions": [
+        {
+          "FirstIndex": 77,
+          "SecondIndex": 80
+        }
+      ]
+    },
+    {
+      "Id": "00000000-0000-0000-0000-000000000000",
+      "FirstStr": "ещё",
+      "SecondStr": "меньше",
+      "Positions": [
+        {
+          "FirstIndex": 171,
+          "SecondIndex": 172
+        }
+      ]
+    },
+    {
+      "Id": "00000000-0000-0000-0000-000000000000",
+      "FirstStr": "булок",
+      "SecondStr": "круассанов",
+      "Positions": [
+        {
+          "FirstIndex": 199,
+          "SecondIndex": 203
+        }
+      ]
+    },
+    {
+      "Id": "00000000-0000-0000-0000-000000000000",
+      "FirstStr": "чаю",
+      "SecondStr": "кофе",
+      "Positions": [
+        {
+          "FirstIndex": 215,
+          "SecondIndex": 224
+        },
+        {
+          "FirstIndex": 270,
+          "SecondIndex": 279
+        }
+      ]
+    },
+    {
+      "Id": "00000000-0000-0000-0000-000000000000",
+      "FirstStr": "французских",
+      "SecondStr": "российских",
+      "Positions": [
+        {
+          "FirstIndex": 242,
+          "SecondIndex": 252
+        }
+      ]
+    }
+  ]
+}

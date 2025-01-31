@@ -24,4 +24,11 @@
       <ProjectReference Include="..\ReplaceHelper\ReplaceHelper.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Data\Test1Result.json" />
+      <Content Include="Data\Test1Result.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>
