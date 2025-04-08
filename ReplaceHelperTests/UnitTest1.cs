@@ -68,18 +68,15 @@ public class UnitTest1
     public void Test2()
     {
         var replaceHelper = new ReplaceHelper.Implementations.ReplaceHelper(_options);
+
+        var test1Result = replaceHelper.GetReplaceHarvest(Str1, Str2);
         
         var getTemplateReplaceQuery = new GetTemplateReplaceQuery
         {
-            Replacements =
-            {
-                new GetTemplateReplacementQuery("ещё", [6]),
-                new GetTemplateReplacementQuery("французских", [77]),
-                new GetTemplateReplacementQuery("ещё", [171]),
-                new GetTemplateReplacementQuery("булок", [199]),
-                new GetTemplateReplacementQuery("чаю", [215, 270]),
-                new GetTemplateReplacementQuery("французских", [242]),
-            }
+            Replacements = test1Result
+                .Replacements
+                .Select(s => new GetTemplateReplacementQuery(s.FirstStr, s.Positions.Select(p => p.FirstIndex).ToArray()))
+                .ToList()
         };
         
         var result = replaceHelper.GetReplaceTemplate(Str1, getTemplateReplaceQuery);

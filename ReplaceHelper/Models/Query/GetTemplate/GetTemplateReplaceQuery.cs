@@ -5,5 +5,5 @@ namespace ReplaceHelper.Models.Query.GetTemplate;
 /// </summary>
 public class GetTemplateReplaceQuery
 {
-    public List<GetTemplateReplacementQuery> Replacements { get; } = [];
+    public List<GetTemplateReplacementQuery> Replacements { get; set; } = [];
 }
